@@ -6,6 +6,7 @@ import io.reactivex.Observable;
 import io.reactivex.Single;
 import kapadokia.nyandoro.covidlatestalert.service.model.Continents;
 import kapadokia.nyandoro.covidlatestalert.service.model.Country;
+import kapadokia.nyandoro.covidlatestalert.service.model.Today;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
@@ -31,5 +32,9 @@ public interface CovidService {
     // get specific country
     @GET("countries/:query?yesterday=true&strict=true&query=")
     Single<Country> getSpecificCountry(@Query("query") String country);
+
+    //get today's cases
+    @GET("all?yesterday=")
+    Single<Today> getTodaysCases();
 
 }
