@@ -44,6 +44,8 @@ dependencies {
     annotationProcessor "android.arch.lifecycle:compiler:1.1.1"
     implementation 'com.github.bumptech.glide:glide:4.11.0'
 
+    //gif
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.18'
 
     //Dagger Dependency
     def dagger = "2.27"

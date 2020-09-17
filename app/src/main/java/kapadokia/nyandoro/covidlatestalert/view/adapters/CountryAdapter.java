@@ -22,7 +22,6 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.MyViewHo
 
     List<? extends Country> countriesList;
 
-
     public class MyViewHolder extends RecyclerView.ViewHolder{
 
         final CountryItemsBinding binding;
