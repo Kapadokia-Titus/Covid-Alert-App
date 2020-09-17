@@ -1,16 +1,16 @@
 package kapadokia.nyandoro.covidlatestalert.service.model;
 
-public class Continents {
+public class Today {
+     private int updated; //": 1600377410459,
+     private  int cases;
+     private  int todayCases;
+     private  int deaths;
+     private  int todayDeaths;
+     private  int recovered;
+     private  int todayRecovered;
+     private  int affectedCountries;
+     private  int tests;
 
-    private int updated;
-    private int cases;
-    private int todayCases;
-    private int deaths;
-    private int todayDeaths;
-    private int recovered;
-    private int todayRecovered;
-    private int tests;
-    private String continent;
 
     public int getUpdated() {
         return updated;
@@ -68,6 +68,14 @@ public class Continents {
         this.todayRecovered = todayRecovered;
     }
 
+    public int getAffectedCountries() {
+        return affectedCountries;
+    }
+
+    public void setAffectedCountries(int affectedCountries) {
+        this.affectedCountries = affectedCountries;
+    }
+
     public int getTests() {
         return tests;
     }
@@ -76,17 +84,10 @@ public class Continents {
         this.tests = tests;
     }
 
-    public String getContinent() {
-        return continent;
-    }
-
-    public void setContinent(String continent) {
-        this.continent = continent;
-    }
 
     @Override
     public String toString() {
-        return "Continents{" +
+        return "Today{" +
                 "updated=" + updated +
                 ", cases=" + cases +
                 ", todayCases=" + todayCases +
@@ -94,8 +95,8 @@ public class Continents {
                 ", todayDeaths=" + todayDeaths +
                 ", recovered=" + recovered +
                 ", todayRecovered=" + todayRecovered +
+                ", affectedCountries=" + affectedCountries +
                 ", tests=" + tests +
-                ", continent='" + continent + '\'' +
                 '}';
     }
 }
