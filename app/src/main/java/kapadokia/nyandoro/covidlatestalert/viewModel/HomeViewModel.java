@@ -1,5 +1,7 @@
 package kapadokia.nyandoro.covidlatestalert.viewModel;
 
+import android.util.Log;
+
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
@@ -36,12 +38,13 @@ public class HomeViewModel extends ViewModel {
         .subscribeWith(new DisposableSingleObserver<Today>() {
             @Override
             public void onSuccess(Today today) {
+                Log.d("data", "onSuccess: today " +today.getCases());
                 getTodayMutableLiveData().setValue(today);
             }
 
             @Override
             public void onError(Throwable e) {
-
+                Log.d("error", "onError: failed to load data"+ e.toString() );
             }
         })
         );

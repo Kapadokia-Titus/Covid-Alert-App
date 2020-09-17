@@ -34,7 +34,7 @@ public interface CovidService {
     Single<Country> getSpecificCountry(@Query("query") String country);
 
     //get today's cases
-    @GET("all?yesterday=")
+    @GET("all")
     Single<Today> getTodaysCases();
 
 }

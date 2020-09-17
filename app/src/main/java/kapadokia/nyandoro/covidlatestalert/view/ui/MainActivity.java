@@ -26,7 +26,7 @@ import kapadokia.nyandoro.covidlatestalert.viewModel.ViewModelFactory;
 public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
-    List<Country> countries;
+
 
     @Inject
     ViewModelProvider.Factory viewModelProvider;
