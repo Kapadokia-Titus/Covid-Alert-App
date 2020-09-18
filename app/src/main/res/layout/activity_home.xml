@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <import type="kapadokia.nyandoro.covidlatestalert.utils.BigDecimalUtil"/>
+        <import type="android.view.View"/>
         <variable
             name="today"
             type="kapadokia.nyandoro.covidlatestalert.service.model.Today" />
@@ -52,7 +54,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="8dp"
-                    android:text="@{String.valueOf(today.cases)}"
+                    android:text="@{BigDecimalUtil.getValue(today.cases)}"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="15sp"
                     android:textStyle="bold"
@@ -90,7 +92,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="8dp"
-                    android:text="@{String.valueOf(today.tests)}"
+                    android:text="@{BigDecimalUtil.getValue(today.tests)}"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="15sp"
                     android:textStyle="bold"
@@ -125,7 +127,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="8dp"
-                    android:text="@{String.valueOf(today.recovered)}"
+                    android:text="@{BigDecimalUtil.getValue(today.recovered)}"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="15sp"
                     android:textStyle="bold"
@@ -162,7 +164,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="8dp"
-                    android:text="@{String.valueOf(today.deaths)}"
+                    android:text="@{BigDecimalUtil.getValue(today.deaths)}"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="15sp"
                     android:textStyle="bold"
