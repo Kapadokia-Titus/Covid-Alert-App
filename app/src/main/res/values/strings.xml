@@ -10,4 +10,6 @@
     <string name="r">R</string>
     <string name="d">D</string>
     <string name="continent">Continent</string>
+    <string name="global_statistics">GLOBAL STATISTICS</string>
+    <string name="realtime_data">Realtime data</string>
 </resources>
