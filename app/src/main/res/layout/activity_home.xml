@@ -54,7 +54,7 @@
                     android:padding="8dp"
                     android:text="@{String.valueOf(today.cases)}"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="30sp"
+                    android:textSize="15sp"
                     android:textStyle="bold"
                     tools:text="300" />
             </LinearLayout>
@@ -92,7 +92,7 @@
                     android:padding="8dp"
                     android:text="@{String.valueOf(today.tests)}"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="30sp"
+                    android:textSize="15sp"
                     android:textStyle="bold"
                     tools:text="255" />
             </LinearLayout>
@@ -127,7 +127,7 @@
                     android:padding="8dp"
                     android:text="@{String.valueOf(today.recovered)}"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="30sp"
+                    android:textSize="15sp"
                     android:textStyle="bold"
                     tools:text="150" />
             </LinearLayout>
@@ -164,7 +164,7 @@
                     android:padding="8dp"
                     android:text="@{String.valueOf(today.deaths)}"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="30sp"
+                    android:textSize="15sp"
                     android:textStyle="bold"
                     tools:text="150" />
             </LinearLayout>
@@ -242,6 +242,8 @@
                     android:layout_height="269dp"
                     android:layout_marginStart="2dp"
                     android:layout_marginTop="8dp"
+                    android:id="@+id/continent_recycler"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/cardView5" />

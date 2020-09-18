@@ -2,77 +2,77 @@ package kapadokia.nyandoro.covidlatestalert.service.model;
 
 public class Continents {
 
-    private int updated;
-    private int cases;
-    private int todayCases;
-    private int deaths;
-    private int todayDeaths;
-    private int recovered;
-    private int todayRecovered;
-    private int tests;
+    private long updated;
+    private long cases;
+    private long todayCases;
+    private long deaths;
+    private long todayDeaths;
+    private long recovered;
+    private long todayRecovered;
+    private long tests;
     private String continent;
 
-    public int getUpdated() {
+    public long getUpdated() {
         return updated;
     }
 
-    public void setUpdated(int updated) {
+    public void setUpdated(long updated) {
         this.updated = updated;
     }
 
-    public int getCases() {
+    public long getCases() {
         return cases;
     }
 
-    public void setCases(int cases) {
+    public void setCases(long cases) {
         this.cases = cases;
     }
 
-    public int getTodayCases() {
+    public long getTodayCases() {
         return todayCases;
     }
 
-    public void setTodayCases(int todayCases) {
+    public void setTodayCases(long todayCases) {
         this.todayCases = todayCases;
     }
 
-    public int getDeaths() {
+    public long getDeaths() {
         return deaths;
     }
 
-    public void setDeaths(int deaths) {
+    public void setDeaths(long deaths) {
         this.deaths = deaths;
     }
 
-    public int getTodayDeaths() {
+    public long getTodayDeaths() {
         return todayDeaths;
     }
 
-    public void setTodayDeaths(int todayDeaths) {
+    public void setTodayDeaths(long todayDeaths) {
         this.todayDeaths = todayDeaths;
     }
 
-    public int getRecovered() {
+    public long getRecovered() {
         return recovered;
     }
 
-    public void setRecovered(int recovered) {
+    public void setRecovered(long recovered) {
         this.recovered = recovered;
     }
 
-    public int getTodayRecovered() {
+    public long getTodayRecovered() {
         return todayRecovered;
     }
 
-    public void setTodayRecovered(int todayRecovered) {
+    public void setTodayRecovered(long todayRecovered) {
         this.todayRecovered = todayRecovered;
     }
 
-    public int getTests() {
+    public long getTests() {
         return tests;
     }
 
-    public void setTests(int tests) {
+    public void setTests(long tests) {
         this.tests = tests;
     }
 
