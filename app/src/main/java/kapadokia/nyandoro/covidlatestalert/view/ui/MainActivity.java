@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
                             newFragment = new CountriesFragment();
                             break;
                         case R.id.navigation_stories:
-                            Toast.makeText(MainActivity.this, "Working on stories", Toast.LENGTH_SHORT).show();
+                            newFragment = new NewsFragment();
                             break;
                         case R.id.navigation_health:
                             Toast.makeText(MainActivity.this, "Working on health ", Toast.LENGTH_SHORT).show();
