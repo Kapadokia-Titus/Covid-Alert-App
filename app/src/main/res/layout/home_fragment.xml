@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_height="match_parent"
-        tools:context=".view.ui.Home">
+        tools:context=".view.ui.HomeFragment">
 
         <pl.droidsonroids.gif.GifImageView
             android:id="@+id/gifImageView"

@@ -12,7 +12,7 @@
         android:roundIcon="@drawable/covid_icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.ui.Home" />
+        <activity android:name=".view.ui.MainActivity"/>
         <activity android:name=".view.ui.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,7 +20,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.ui.MainActivity" />
     </application>
 
 </manifest>
