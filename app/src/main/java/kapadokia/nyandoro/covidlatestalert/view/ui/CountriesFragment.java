@@ -3,12 +3,14 @@ package kapadokia.nyandoro.covidlatestalert.view.ui;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 
+import android.app.SearchManager;
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -45,7 +47,7 @@ public class CountriesFragment extends Fragment {
 
         ((BaseApplication) Objects.requireNonNull(getActivity()).getApplication()).getAppComponent().inject(this);
 
-        countryAdapter = new CountryAdapter();
+
         binding.recyclerView.setAdapter(countryAdapter);
 
 
@@ -55,9 +57,31 @@ public class CountriesFragment extends Fragment {
             @Override
             public void onChanged(List<Country> countries) {
                 Log.d("data", "onChanged: "+ countries);
-                countryAdapter.setCountriesList(countries);
+                countryAdapter = new CountryAdapter(countries);
             }
         });
+
+        SearchManager searchManager = (SearchManager) getActivity().getSystemService(Context.SEARCH_SERVICE);
+        SearchView searchView = binding.searchView;
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(getActivity().getComponentName()));
+        searchView.setMaxWidth(Integer.MAX_VALUE);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                // filter recycler view when query submitted
+                countryAdapter.getFilter().filter(query);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                // filter recycler view when query submitted
+                countryAdapter.getFilter().filter(newText);
+                return false;
+            }
+        });
+
+
         return binding.getRoot();
     }
 }

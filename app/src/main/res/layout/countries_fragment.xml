@@ -17,6 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:elevation="@dimen/title_dimen"
+            android:id="@+id/search_view"
             android:layout_marginStart="@dimen/title_dimen"
             android:layout_marginTop="@dimen/title_dimen"
             app:queryHint="@string/search_hint"

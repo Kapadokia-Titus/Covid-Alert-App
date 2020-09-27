@@ -40,7 +40,7 @@ public interface CovidService {
     Single<Today> getTodaysCases();
 
     // news endpoint
-    @GET("everything?q=COVID&from=2020-08-19&sortBy=publishedAt&apiKey=e5033003cfed4a49901db4b0749c4ef1&pageSize=100&page=1")
+    @GET("everything?q=COVID&from=2020-08-20&sortBy=publishedAt&apiKey=e5033003cfed4a49901db4b0749c4ef1&pageSize=100&page=1")
     Single<News> getTodaysNews();
 
 }
