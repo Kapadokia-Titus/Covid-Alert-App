@@ -49,7 +49,7 @@ public class CountriesFragment extends Fragment {
 
 
         binding.recyclerView.setAdapter(countryAdapter);
-
+        countryAdapter = new CountryAdapter();
 
 
         countriesViewModel = ViewModelProviders.of(this, viewModelProvider).get(CountriesViewModel.class);
@@ -57,7 +57,7 @@ public class CountriesFragment extends Fragment {
             @Override
             public void onChanged(List<Country> countries) {
                 Log.d("data", "onChanged: "+ countries);
-                countryAdapter = new CountryAdapter(countries);
+                countryAdapter.setCountriesList(countries);
             }
         });
 
