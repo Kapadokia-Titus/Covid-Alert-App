@@ -15,37 +15,42 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="0dp"
-            android:layout_weight="3"
+            android:layout_width="@dimen/one_thirty_dps"
             android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textSize="16sp"
             tools:text="Continent"
             android:text="@{String.valueOf(continents.continent)}" />
 
         <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_width="@dimen/seventy_dps"
             android:layout_height="wrap_content"
+            android:textSize="@dimen/continent_text_sp"
+            android:maxLines="1"
             tools:text="123456"
             android:text="@{String.valueOf(continents.todayCases)}" />
 
         <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_width="@dimen/seventy_dps"
             android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textSize="@dimen/continent_text_sp"
             tools:text="98743"
             android:text="@{String.valueOf(continents.tests)}" />
 
         <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_width="@dimen/seventy_dps"
             android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textSize="@dimen/continent_text_sp"
             tools:text="23467"
             android:text="@{String.valueOf(continents.recovered)}" />
 
         <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_width="@dimen/seventy_dps"
             android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textSize="@dimen/continent_text_sp"
             tools:text="82243"
             android:text="@{String.valueOf(continents.deaths)}" />
     </LinearLayout>

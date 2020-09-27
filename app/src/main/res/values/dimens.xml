@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="title_dimen">16sp</dimen>
+    <dimen name="seventy_dps">60dp</dimen>
+    <dimen name="one_thirty_dps">130dp</dimen>
+    <dimen name="continent_text_sp">10sp</dimen>
 </resources>
