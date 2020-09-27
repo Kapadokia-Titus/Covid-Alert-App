@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <import type="kapadokia.nyandoro.covidlatestalert.utils.BigDecimalUtil"/>
+        <import type="android.view.View"/>
         <variable
             name="continents"
             type="kapadokia.nyandoro.covidlatestalert.service.model.Continents" />
@@ -20,7 +22,7 @@
             android:maxLines="1"
             android:textSize="16sp"
             tools:text="Continent"
-            android:text="@{String.valueOf(continents.continent)}" />
+            android:text="@{continents.continent}" />
 
         <TextView
             android:layout_width="@dimen/seventy_dps"
@@ -28,7 +30,7 @@
             android:textSize="@dimen/continent_text_sp"
             android:maxLines="1"
             tools:text="123456"
-            android:text="@{String.valueOf(continents.todayCases)}" />
+            android:text="@{BigDecimalUtil.getValue(continents.todayCases)}" />
 
         <TextView
             android:layout_width="@dimen/seventy_dps"
@@ -36,7 +38,7 @@
             android:maxLines="1"
             android:textSize="@dimen/continent_text_sp"
             tools:text="98743"
-            android:text="@{String.valueOf(continents.tests)}" />
+            android:text="@{BigDecimalUtil.getValue(continents.tests)}" />
 
         <TextView
             android:layout_width="@dimen/seventy_dps"
@@ -44,7 +46,7 @@
             android:maxLines="1"
             android:textSize="@dimen/continent_text_sp"
             tools:text="23467"
-            android:text="@{String.valueOf(continents.recovered)}" />
+            android:text="@{BigDecimalUtil.getValue(continents.recovered)}" />
 
         <TextView
             android:layout_width="@dimen/seventy_dps"
@@ -52,6 +54,6 @@
             android:maxLines="1"
             android:textSize="@dimen/continent_text_sp"
             tools:text="82243"
-            android:text="@{String.valueOf(continents.deaths)}" />
+            android:text="@{BigDecimalUtil.getValue(continents.deaths)}" />
     </LinearLayout>
 </layout>
