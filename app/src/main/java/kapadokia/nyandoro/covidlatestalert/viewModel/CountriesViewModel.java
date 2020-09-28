@@ -43,12 +43,12 @@ public class CountriesViewModel extends ViewModel {
             @Override
             public void onSuccess(List<Country> countries) {
                 getCountryMutableLiveData().setValue(countries);
-                Log.d("data", "onSuccess: " + countries);
+                Log.d("content", "onSuccess: " + countries);
             }
 
             @Override
             public void onError(Throwable e) {
-                Log.d("data", "onError: "+e.toString());
+                Log.d("content", "onError: "+e.toString());
             }
         })
         );

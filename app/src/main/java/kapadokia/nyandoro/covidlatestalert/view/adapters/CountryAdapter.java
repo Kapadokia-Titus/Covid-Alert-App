@@ -21,11 +21,9 @@ import kapadokia.nyandoro.covidlatestalert.R;
 import kapadokia.nyandoro.covidlatestalert.databinding.CountryItemsBinding;
 import kapadokia.nyandoro.covidlatestalert.service.model.Country;
 
-public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.MyViewHolder> implements Filterable {
+public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.MyViewHolder>{
 
     List<? extends Country> countriesList;
-    List<? extends Country> countriesFilteredList;
-
 
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
@@ -46,6 +44,7 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.MyViewHo
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+        Log.d("loaded", "onBindViewHolder: "+ countriesList);
         holder.binding.setCountries(countriesList.get(position));
         holder.binding.executePendingBindings();
     }
@@ -90,37 +89,5 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.MyViewHo
         }
     }
 
-    @Override
-    public Filter getFilter() {
-        return new Filter() {
-            @Override
-            protected FilterResults performFiltering(CharSequence constraint) {
-                String character = constraint.toString();
-                if (character.isEmpty()){
-                    countriesFilteredList =countriesList;
-
-                }else {
-                    List<Country> filteredList = new ArrayList<>();
-                    for (Country row:countriesList){
-                        Log.d("values", "CountryAdapter: "+ countriesList);
-                        if (row.getCountry().toLowerCase().contains(character.toLowerCase())){
-                            filteredList.add(row);
-                        }
-                    }
-                    countriesFilteredList = filteredList;
-                }
-                FilterResults filterResults = new FilterResults();
-                filterResults.values = countriesFilteredList;
-                Log.d("values", "performFiltering: " +countriesFilteredList);
-                return filterResults;
-            }
-
-            @Override
-            protected void publishResults(CharSequence constraint, FilterResults results) {
-                countriesList = (List<? extends Country>) results.values;
-                notifyDataSetChanged();
-            }
-        };
-    }
 
 }

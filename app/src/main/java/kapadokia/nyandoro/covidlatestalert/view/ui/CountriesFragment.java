@@ -48,8 +48,9 @@ public class CountriesFragment extends Fragment {
         ((BaseApplication) Objects.requireNonNull(getActivity()).getApplication()).getAppComponent().inject(this);
 
 
-        binding.recyclerView.setAdapter(countryAdapter);
+
         countryAdapter = new CountryAdapter();
+        binding.recyclerView.setAdapter(countryAdapter);
 
 
         countriesViewModel = ViewModelProviders.of(this, viewModelProvider).get(CountriesViewModel.class);
@@ -61,25 +62,6 @@ public class CountriesFragment extends Fragment {
             }
         });
 
-        SearchManager searchManager = (SearchManager) getActivity().getSystemService(Context.SEARCH_SERVICE);
-        SearchView searchView = binding.searchView;
-        searchView.setSearchableInfo(searchManager.getSearchableInfo(getActivity().getComponentName()));
-        searchView.setMaxWidth(Integer.MAX_VALUE);
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                // filter recycler view when query submitted
-                countryAdapter.getFilter().filter(query);
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                // filter recycler view when query submitted
-                countryAdapter.getFilter().filter(newText);
-                return false;
-            }
-        });
 
 
         return binding.getRoot();
