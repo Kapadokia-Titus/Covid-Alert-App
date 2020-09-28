@@ -43,9 +43,8 @@ The data API is (https://corona.lmao.ninja/v2/)
 
 
 ### App UI
-<p align="center">
   <img src="covid_splash.jpg" width="300">
   <img src="cases.jpg" width="300">
   <img src="countries.jpg" width="300">
   <img src="countries_search.jpg" width="300">
-</p>
+
